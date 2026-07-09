@@ -36,25 +36,27 @@ section{padding:88px 0;}
 .navbar{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);padding:16px 0;box-shadow:0 8px 30px rgba(7,31,61,.08);position:sticky;top:0;z-index:1000;animation:slideDown .8s ease both;overflow:visible;}
 .logo{display:inline-flex;align-items:center;gap:10px;height:60px;padding:0;font-size:31px;font-weight:800;color:var(--navy);letter-spacing:-.4px;overflow:visible;}
 .logo img{height:92px;width:auto;max-height:none;display:block;object-fit:contain;transform-origin:left center;transition:transform .25s ease;}
-.logo:hover img{transform:scale(1.04);}
 .logo-text{font-size:0;line-height:0;}
 .logo span{color:var(--blue);}
 .navbar-nav .nav-link{font-size:15px;font-weight:700;color:#26344a;margin:0 8px;position:relative;transition:color .25s ease;}
 .navbar-nav .nav-link::before{content:"";position:absolute;left:8px;right:8px;bottom:2px;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .28s ease;}
 .navbar-nav .nav-link:hover{color:var(--blue);}
 .navbar-nav .nav-link:hover::before{transform:scaleX(1);}
+.btn-quorel-nav{display:inline-flex;max-height: 30px; align-items:center;gap:9px;border:0;background:linear-gradient(90deg,var(--blue),var(--cyan));color:#fff;padding:13px 30px;border-radius:4px;font-weight:800;box-shadow:0 14px 32px rgba(13,110,253,.22);background-size:180% 100%;transition:transform .25s ease,box-shadow .25s ease,background-position .35s ease;}
+.btn-quorel-nav:hover{color:#fff;transform:translateY(-3px);box-shadow:0 20px 42px rgba(2, 75, 184, 0.32);background-position:100% 0;}
 .dropdown-toggle::after{display:none;}
 .nav-chevron{font-size:12px;margin-left:5px;vertical-align:1px;transition:transform .25s ease;}
 .dropdown:hover .nav-chevron,.dropdown .show .nav-chevron{transform:rotate(180deg);}
-.btn-quorel{display:inline-flex;align-items:center;gap:9px;border:0;background:linear-gradient(90deg,var(--blue),var(--cyan));color:#fff;padding:13px 24px;border-radius:4px;font-weight:800;box-shadow:0 14px 32px rgba(13,110,253,.22);background-size:180% 100%;transition:transform .25s ease,box-shadow .25s ease,background-position .35s ease;}
+.btn-quorel{display:inline-flex;max-height: 60px; align-items:center;gap:9px;border:0;background:linear-gradient(90deg,var(--blue),var(--cyan));color:#fff;padding:13px 24px;border-radius:4px;font-weight:800;box-shadow:0 14px 32px rgba(13,110,253,.22);background-size:180% 100%;transition:transform .25s ease,box-shadow .25s ease,background-position .35s ease;}
 .btn-quorel:hover{color:#fff;transform:translateY(-3px);box-shadow:0 20px 42px rgba(13,110,253,.32);background-position:100% 0;}
-.btn-quorel i,.btn-lightline i,.btn-outline-quorel i{transition:transform .25s ease;}
+.btn-quorel i,.btn-lightline i,.btn-outline-quorel i{transition:transform .25s ease; max-height: 50px;}
 .btn-quorel:hover i,.btn-lightline:hover i,.btn-outline-quorel:hover i{transform:translateX(4px);}
 .btn-lightline{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.55);color:#fff;padding:12px 22px;border-radius:4px;font-weight:800;transition:background .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease;}
 .btn-lightline:hover{background:#fff;color:var(--navy);transform:translateY(-3px);box-shadow:0 18px 36px rgba(0,0,0,.18);}
 .btn-outline-quorel{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--blue);color:var(--blue);padding:12px 22px;border-radius:4px;font-weight:800;background:#fff;transition:background .25s ease,color .25s ease,transform .25s ease,box-shadow .25s ease;}
 .btn-outline-quorel:hover{background:var(--blue);color:#fff;transform:translateY(-3px);box-shadow:0 16px 34px rgba(13,110,253,.2);}
 .account-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+
 .signin-link{display:inline-flex;align-items:center;gap:7px;color:var(--navy);font-weight:800;font-size:15px;transition:color .25s ease,transform .25s ease;}
 .signin-link:hover{color:var(--blue);transform:translateY(-2px);}
 .account-menu .dropdown-toggle{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;color:var(--navy);padding:11px 15px;border-radius:4px;font-weight:800;font-size:15px;transition:background .25s ease,border-color .25s ease,box-shadow .25s ease;}
@@ -95,7 +97,20 @@ section{padding:88px 0;}
 .service-card h3{font-size:24px;color:var(--navy);font-weight:800;margin-bottom:13px;}
 .service-card p{color:var(--muted);line-height:28px;margin-bottom:20px;}
 .service-card ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px;color:#435064;}
-.service-card li::before{content:"\\F26A";font-family:"bootstrap-icons";color:var(--blue);margin-right:9px;}
+.service-card li{
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-card li::before{
+    content: "\F26A";
+    font-family: "bootstrap-icons";
+    color: var(--blue);
+    width: 24px;
+    min-width: 24px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
 .split{background:var(--light);}
 .split-panel{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:42px;height:100%;animation:fadeUp .8s ease both;}
 .split-image{min-height:470px;background:linear-gradient(0deg,rgba(7,31,61,.12),rgba(7,31,61,.12)),url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1300&q=80') center/cover no-repeat;height:100%;transition:transform .6s ease,filter .6s ease;}
@@ -229,18 +244,19 @@ section{padding:64px 0;}
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#products" role="button" data-bs-toggle="dropdown">Products <i class="bi bi-chevron-down nav-chevron"></i></a>
         <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#sales">Sales CRM</a></li>
-        <li><a class="dropdown-item" href="#mail">Business Mail</a></li>
-        <li><a class="dropdown-item" href="#creator">App Creator</a></li>
+        <li><a class="dropdown-item" href="#sales">Quorel HRMS</a></li>
+        <!-- <li><a class="dropdown-item" href="#mail">Business Mail</a></li>
+        <li><a class="dropdown-item" href="#creator">App Creator</a></li> -->
         </ul>
     </li>
     <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
     <li class="nav-item"><a class="nav-link" href="#customers">Our Customers</a></li>
     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
     </ul>
-    <!-- <div class="account-actions">
-    <a href="#register" class="btn-quorel">Get Register</a>
-        <div class="dropdown">
+    <div class="account-actions">
+    <a href="#register" class="btn-quorel-nav">Sign Up</a>
+    <a href="#register" class="btn-quorel-nav">Sign In</a>
+        <!-- <div class="dropdown">
             <button class="profile-btn" data-bs-toggle="dropdown"><i class="bi bi-person"></i> </button>
             <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i>My Profile </a></li>
@@ -248,8 +264,8 @@ section{padding:64px 0;}
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i>Sign Out</a></li>
             </ul>
-        </div>
-    </div> -->
+        </div> -->
+    </div>
 </div>
 </div>
 </nav>
@@ -281,26 +297,26 @@ section{padding:64px 0;}
 <h2 class="section-title">Business apps designed to scale your company</h2>
 <p class="section-copy">Quorel gives every team a connected app for daily work, shared data, automation, reporting, and customer experience.</p>
 <div class="offering-tabs">
-<a href="">Sales CRM</a>
-<a href="">Mail</a>
-<a href="">Creator</a>
+<!-- <a href="">QUOREL HRMS</a> -->
+<!-- <a href="">Mail</a>
+<a href="">Creator</a> -->
 </div>
-<div class="row g-4 text-start">
-<div class="col-lg-4 col-md-6" id="sales">
+<div class="row g-4 justify-content-center">
+<div class="col-lg-6 col-md-8" id="sales">
 <div class="service-card">
 <div class="service-icon"><i class="bi bi-people-fill"></i></div>
-<h3>Quorel CRM</h3>
-<p>Manage leads, deals, contacts, accounts, calls, tasks, quotes, and customer history from one clean sales workspace.</p>
+<h3>Quorel HRMS</h3>
+<p>Streamline your workforce with an intelligent HR management system that simplifies attendance, leave, expenses, payroll, and employee lifecycle management.</p>
 <ul>
-<li>Lead and pipeline management</li>
-<li>Sales forecasting and activities</li>
-<li>Quotes, approvals, and automation</li>
-<li>Customer records across teams</li>
+    <li>Real-time attendance and login/logout monitoring</li>
+    <li>Leave, shift, and holiday management</li>
+    <li>Expense claims with approval workflows</li>
+    <li>Employee profiles, payroll, and performance tracking</li>
 </ul>
 <a href="#contact" class="btn-outline-quorel">Explore More <i class="bi bi-arrow-right"></i></a>
 </div>
 </div>
-<div class="col-lg-4 col-md-6" id="mail">
+<!-- <div class="col-lg-4 col-md-6" id="mail">
 <div class="service-card">
 <div class="service-icon"><i class="bi bi-envelope-paper"></i></div>
 <h3>Quorel Mail</h3>
@@ -327,7 +343,7 @@ section{padding:64px 0;}
 </ul>
 <a href="#contact" class="btn-outline-quorel">Explore More <i class="bi bi-arrow-right"></i></a>
 </div>
-</div>
+</div> -->
 </div>
 </div>
 </section>
@@ -359,7 +375,7 @@ section{padding:64px 0;}
 <h2 class="section-title">All the software you need to run your business</h2>
 <p class="section-copy">Quorel brings a complete range of business applications into a service-led technology experience for modern teams.</p>
 <div class="row g-4 text-start mt-4">
-<div class="col-lg-3 col-md-6"><div class="suite-card"><i class="bi bi-people-fill"></i><h3>Sales CRM</h3><p>Leads, deals, pipeline tracking, quotes, forecasting, and customer history.</p></div></div>
+<div class="col-lg-3 col-md-6"><div class="suite-card"><i class="bi bi-people-fill"></i><h3>Quorel HRMS</h3><p>Leads, deals, pipeline tracking, quotes, forecasting, and customer history.</p></div></div>
 <div class="col-lg-3 col-md-6"><div class="suite-card"><i class="bi bi-megaphone-fill"></i><h3>Marketing</h3><p>Email campaigns, journeys, forms, social media, webinars, and segmentation.</p></div></div>
 <div class="col-lg-3 col-md-6"><div class="suite-card"><i class="bi bi-chat-dots-fill"></i><h3>Service Desk</h3><p>Tickets, live chat, knowledge base, field service, SLAs, and feedback.</p></div></div>
 <div class="col-lg-3 col-md-6"><div class="suite-card"><i class="bi bi-receipt"></i><h3>Finance</h3><p>Accounting, billing, inventory, expenses, payments, and subscriptions.</p></div></div>
@@ -407,7 +423,7 @@ section{padding:64px 0;}
 <i class="bi bi-person-check-fill"></i>
 <h3>Get Help From a Partner</h3>
 <p>Connect with trained Quorel specialists who can help you evaluate products, migrate data, configure workflows, train teams, and launch faster.</p>
-<a href="#contact" class="btn-outline-quorel">Find a Specialist <i class="bi bi-arrow-right"></i></a>
+<a href="#contact" class="btn-quorel">Find a Specialist </a>
 </div>
 </div>
 <div class="col-lg-6">
@@ -415,7 +431,7 @@ section{padding:64px 0;}
 <i class="bi bi-briefcase-fill"></i>
 <h3>Join the Partner Program</h3>
 <p>Build your services around Quorel products. Support customers with implementation, customization, training, integrations, and ongoing advisory work.</p>
-<a href="#contact" class="btn-quorel">Apply to Partner <i class="bi bi-arrow-right"></i></a>
+<a href="#contact" class="btn-quorel">Apply to Partner</a>
 </div>
 </div>
 </div>
@@ -468,10 +484,10 @@ section{padding:64px 0;}
 <div class="col-lg-3 col-md-6">
 <h4>Products</h4>
 <ul>
-<li><a href="#sales">Sales CRM</a></li>
-<li><a href="#mail">Business Mail</a></li>
-<li><a href="#creator">App Creator</a></li>
-<li><a href="#products">Finance and Billing</a></li>
+<li><a href="#sales">Quorel HRMS</a></li>
+<!-- <li><a href="#mail">Attendance Management</a></li>
+<li><a href="#creator">Leave Management</a></li>
+<li><a href="#products">Expense Management</a></li> -->
 </ul>
 </div>
 <div class="col-lg-3 col-md-6">
