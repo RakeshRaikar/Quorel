@@ -97,20 +97,9 @@ section{padding:88px 0;}
 .service-card h3{font-size:24px;color:var(--navy);font-weight:800;margin-bottom:13px;}
 .service-card p{color:var(--muted);line-height:28px;margin-bottom:20px;}
 .service-card ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px;color:#435064;}
-.service-card li{
-    display: flex;
-    align-items: flex-start;
-}
+.service-card li{display: flex;align-items: flex-start;}
+.service-card li::before{content: "\F26A";font-family: "bootstrap-icons"; color: var(--blue); width: 24px; min-width: 24px; margin-right: 10px;margin-top: 2px;}
 
-.service-card li::before{
-    content: "\F26A";
-    font-family: "bootstrap-icons";
-    color: var(--blue);
-    width: 24px;
-    min-width: 24px;
-    margin-right: 10px;
-    margin-top: 2px;
-}
 .split{background:var(--light);}
 .split-panel{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:42px;height:100%;animation:fadeUp .8s ease both;}
 .split-image{min-height:470px;background:linear-gradient(0deg,rgba(7,31,61,.12),rgba(7,31,61,.12)),url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1300&q=80') center/cover no-repeat;height:100%;transition:transform .6s ease,filter .6s ease;}
@@ -225,12 +214,7 @@ section{padding:64px 0;}
 </style>
 </head>
 <body>
-<!-- <div class="topbar">
-<div class="container wrap">
-<span><i class="bi bi-envelope"></i> sales@quoreltech.com | support@quoreltech.com</span>
-<span><i class="bi bi-telephone"></i> +91 96636 96636 | <a href="#contact">Reach Us</a></span>
-</div>
-</div> -->
+
 <nav class="navbar navbar-expand-lg">
 <div class="container">
 <a class="navbar-brand logo" href="#"><img src="Images/Quorel-logo-removebg-preview.png" alt="Quorel Technologies"><span class="logo-text">Quorel Technologies</span></a>
